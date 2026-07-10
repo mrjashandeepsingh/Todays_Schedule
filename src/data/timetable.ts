@@ -394,8 +394,8 @@ export function buildScheduleItems(periods: Period[]): ScheduleItem[] {
   for (let i = 0; i < periods.length; i++) {
     const p = periods[i]
     // Insert lunch if gap after 12:50
-    if (i > 0 && periods[i - 1].endTime === '12:50' && p.startTime === '13:50') {
-      result.push({ kind: 'break', label: 'Lunch Break', startTime: '12:50', endTime: '13:50' })
+    if (i > 0 && periods[i - 1].endTime === '12:55' && p.startTime === '13:50') {
+      result.push({ kind: 'break', label: 'Lunch Break', startTime: '12:55', endTime: '13:50' })
     }
     result.push(p)
   }
